@@ -7,7 +7,7 @@ if (window.require) {
     window.require.config({
         map: {
             "*" : {
-                "proteinfeatureview-jupyter": "nbextensions/proteinfeatureview-jupyter/index",
+                "ipyproteinfeatureview": "nbextensions/ipyproteinfeatureview/index",
                 "jupyter-js-widgets": "nbextensions/jupyter-js-widgets/extension"
             }
         }

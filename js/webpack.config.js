@@ -19,7 +19,7 @@ module.exports = [
         entry: './src/extension.js',
         output: {
             filename: 'extension.js',
-            path: '../proteinfeatureview-jupyter/static',
+            path: '../ipyproteinfeatureview/static',
             libraryTarget: 'amd'
         }
     },
@@ -32,7 +32,7 @@ module.exports = [
         entry: './src/index.js',
         output: {
             filename: 'index.js',
-            path: '../proteinfeatureview-jupyter/static',
+            path: '../ipyproteinfeatureview/static',
             libraryTarget: 'amd'
         },
         devtool: 'source-map',
@@ -41,7 +41,7 @@ module.exports = [
         },
         externals: ['jupyter-js-widgets']
     },
-    {// Embeddable proteinfeatureview-jupyter bundle
+    {// Embeddable ipyproteinfeatureview bundle
      //
      // This bundle is generally almost identical to the notebook bundle
      // containing the custom widget views and models.
@@ -60,7 +60,7 @@ module.exports = [
             filename: 'index.js',
             path: './dist/',
             libraryTarget: 'amd',
-            publicPath: 'https://unpkg.com/proteinfeatureview-jupyter@' + version + '/dist/'
+            publicPath: 'https://unpkg.com/ipyproteinfeatureview@' + version + '/dist/'
         },
         devtool: 'source-map',
         module: {

@@ -1,1 +1,1 @@
-recursive-include proteinfeatureview-jupyter/static *.*
+recursive-include ipyproteinfeatureview/static *.*

@@ -66,8 +66,8 @@ class NPM(Command):
     node_modules = os.path.join(node_root, 'node_modules')
 
     targets = [
-        os.path.join(here, 'proteinfeatureview-jupyter', 'static', 'extension.js'),
-        os.path.join(here, 'proteinfeatureview-jupyter', 'static', 'index.js')
+        os.path.join(here, 'ipyproteinfeatureview', 'static', 'extension.js'),
+        os.path.join(here, 'ipyproteinfeatureview', 'static', 'index.js')
     ]
 
     def initialize_options(self):
@@ -112,20 +112,20 @@ class NPM(Command):
         update_package_data(self.distribution)
 
 version_ns = {}
-with open(os.path.join(here, 'proteinfeatureview-jupyter', '_version.py')) as f:
+with open(os.path.join(here, 'ipyproteinfeatureview', '_version.py')) as f:
     exec(f.read(), {}, version_ns)
 
 setup_args = {
-    'name': 'proteinfeatureview-jupyter',
+    'name': 'ipyproteinfeatureview',
     'version': version_ns['__version__'],
     'description': 'Jupyter widget to display sequences using a Protein Feature View widget',
     'long_description': LONG_DESCRIPTION,
     'include_package_data': True,
     'data_files': [
-        ('share/jupyter/nbextensions/proteinfeatureview-jupyter', [
-            'proteinfeatureview-jupyter/static/extension.js',
-            'proteinfeatureview-jupyter/static/index.js',
-            'proteinfeatureview-jupyter/static/index.js.map',
+        ('share/jupyter/nbextensions/ipyproteinfeatureview', [
+            'ipyproteinfeatureview/static/extension.js',
+            'ipyproteinfeatureview/static/index.js',
+            'ipyproteinfeatureview/static/index.js.map',
         ]),
     ],
     'install_requires': [
